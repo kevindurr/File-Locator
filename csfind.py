@@ -21,8 +21,8 @@ def walktree(top):
             # It's a directory, recurse into it
             walktree(pathname)
         elif S_ISREG(mode):
-            # It's a regular file
-            number = 0
+            # It's a regular file, let's calculate the line number and pathname
+            number = 0 
             if S_ISREG(mode):
                 if not args.name or re.match(args.name + "$", f):
                     if not args.grep:
